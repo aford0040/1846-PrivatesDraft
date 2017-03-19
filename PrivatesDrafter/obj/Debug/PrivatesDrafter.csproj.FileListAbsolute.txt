@@ -5,3 +5,4 @@ F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.exe
 F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.pdb
 F:\Experiments\PrivatesDrafter\PrivatesDrafter\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 F:\Experiments\PrivatesDrafter\PrivatesDrafter\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.csprojResolveAssemblyReference.cache

@@ -26,7 +26,7 @@ namespace Privates_Drafter
         static void Main(string[] args)
         {
             // randomize
-            new PrivateDraftServices().SetupGame(AvailablePrivates);
+            AvailablePrivates = new PrivateDraftServices().SetupGame();
 
             // do the ui
             while (AvailablePrivates.Count > 0)
