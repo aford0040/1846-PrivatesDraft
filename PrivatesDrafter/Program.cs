@@ -106,7 +106,7 @@ namespace Privates_Drafter
             for (int I = 7; I <= 13; I++)
                 queueListItems.Add(I);
 
-            // randomize the list and add to queue (taken from: http://stackoverflow.com/questions/273313/randomize-a-listt )
+            // randomize the list and add to queue
             PrivateDraftServices.Shuffle(queueListItems, useMeRandomly);
 
             // set queue equal to new randomed list
