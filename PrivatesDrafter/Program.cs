@@ -7,22 +7,26 @@ using System.Threading.Tasks;
 
 namespace Privates_Drafter
 {
+    /// <summary>
+    /// The main class for the program
+    /// </summary>
     class Program
     {
-        /// <summary>
-        /// THe number of players in the game
-        /// </summary>
-        public int NumberOfPlayers { get; set; }
-
+        #region Properties
         /// <summary>
         /// The queue of available privates
         /// </summary>
         public static Queue<int> AvailablePrivates = new Queue<int>();
+        #endregion
 
+        /// <summary>
+        /// Where all things magical begin
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             // randomize
-            SetupGame();
+            new PrivateDraftServices().SetupGame(AvailablePrivates);
 
             // do the ui
             while (AvailablePrivates.Count > 0)
@@ -65,7 +69,7 @@ namespace Privates_Drafter
                 privatesSelection.Remove(selectPrivate);
 
                 // shuffle
-                Shuffle(privatesSelection, new Random());
+                PrivateDraftServices.Shuffle(privatesSelection, new Random());
 
                 // add the available private to queue
                 foreach (int I in privatesSelection)
@@ -76,41 +80,5 @@ namespace Privates_Drafter
             }
         }
 
-        /// <summary>
-        /// Time to setup the game
-        /// </summary>
-        private static void SetupGame()
-        {
-            // local var
-            Random useMeRandomly = new Random();
-            List<int> queueListItems = new List<int>();
-
-            // figure out which blue privates are taken out
-            int tempInt = useMeRandomly.Next(4, 7);
-
-            // add the blue private to a list
-            queueListItems.Add(tempInt);
-
-            // figure out orage private
-            tempInt = useMeRandomly.Next(1, 4);
-
-            // add orange private to list
-            queueListItems.Add(tempInt);
-
-            // figure out which company is taken out
-            RailRoads inPlayRailroad = (RailRoads)useMeRandomly.Next(1, 4);
-
-            Console.WriteLine($"Railroad chosen for play: {inPlayRailroad.ToString().Replace('_', ' ')}");
-
-            // add the rest of the privates that dont come out
-            for (int I = 7; I <= 13; I++)
-                queueListItems.Add(I);
-
-            // randomize the list and add to queue
-            PrivateDraftServices.Shuffle(queueListItems, useMeRandomly);
-
-            // set queue equal to new randomed list
-            AvailablePrivates = new Queue<int>(queueListItems);
-        }
     }
 }
