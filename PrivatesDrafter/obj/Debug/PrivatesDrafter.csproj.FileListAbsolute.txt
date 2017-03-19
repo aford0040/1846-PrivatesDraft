@@ -1,0 +1,6 @@
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\bin\Debug\PrivatesDrafter.exe.config
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\bin\Debug\PrivatesDrafter.exe
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\bin\Debug\PrivatesDrafter.pdb
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.csprojResolveAssemblyReference.cache
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.exe
+F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.pdb
