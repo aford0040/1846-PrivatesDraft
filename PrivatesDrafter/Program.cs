@@ -28,6 +28,15 @@ namespace Privates_Drafter
             // randomize
             AvailablePrivates = new PrivateDraftServices().SetupGame();
 
+            // start the drafting process
+            StartUI();
+        }
+
+        /// <summary>
+        /// Starts the UI to begin the drafring process
+        /// </summary>
+        private static void StartUI()
+        {
             // do the ui
             while (AvailablePrivates.Count > 0)
             {
@@ -79,6 +88,5 @@ namespace Privates_Drafter
                 Console.Clear();
             }
         }
-
     }
 }
