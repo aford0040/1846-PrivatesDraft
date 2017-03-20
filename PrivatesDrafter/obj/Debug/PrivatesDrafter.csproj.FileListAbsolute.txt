@@ -4,3 +4,6 @@ F:\Experiments\PrivatesDrafter\PrivatesDrafter\bin\Debug\PrivatesDrafter.pdb
 F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.csprojResolveAssemblyReference.cache
 F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.exe
 F:\Experiments\PrivatesDrafter\PrivatesDrafter\obj\Debug\PrivatesDrafter.pdb
+C:\Users\aford\Desktop\Experiments\1846-PrivatesDraft\PrivatesDrafter\bin\Debug\PrivatesDrafter.exe.config
+C:\Users\aford\Desktop\Experiments\1846-PrivatesDraft\PrivatesDrafter\obj\Debug\PrivatesDrafter.exe
+C:\Users\aford\Desktop\Experiments\1846-PrivatesDraft\PrivatesDrafter\obj\Debug\PrivatesDrafter.pdb
