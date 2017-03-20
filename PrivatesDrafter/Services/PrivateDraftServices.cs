@@ -152,6 +152,16 @@ namespace PrivatesDrafter.Services
                     // which railroad is taken out?
                     RailRoads outOfPlayRailroad = (RailRoads)useMeRandomly.Next(1, 4);
 
+                    // add the railroads that werent taken out
+                    List<RailRoads> railroadsToAdd = new List<RailRoads>() {
+                        RailRoads.Chesapeak_And_Ohio,
+                        RailRoads.Erie,
+                        RailRoads.Pennsylvania
+                    }.Except(new List<RailRoads>() { outOfPlayRailroad }).ToList();
+
+                    // add them to the list
+                    inPlayRailroads.AddRange(railroadsToAdd);
+
                     break;
 
                 // add in all 5 privates
@@ -168,9 +178,12 @@ namespace PrivatesDrafter.Services
             }
 
             // notify the user(s)
-            Console.WriteLine("The railroads chosen for play are:");
+            Console.WriteLine("The railroad(s) chosen for play are:");
             foreach (RailRoads railroad in inPlayRailroads)
                 Console.WriteLine($"{railroad.ToString().Replace('_', ' ')}");
+
+            // buffer space
+            Console.WriteLine(Environment.NewLine);
         }
         #endregion
 

@@ -58,24 +58,15 @@ namespace Privates_Drafter
 
                 // get the selected private
                 Console.WriteLine("Select a private:");
-                string selectedPrivate = Console.ReadLine().Replace(' ', '_');
 
                 // get the private
-                Privates selectPrivate = 0;
-                while (selectPrivate == 0)
-                    try
-                    {
-                        // try to convvert
-                        selectPrivate = (Privates)Enum.Parse(typeof(Privates), selectedPrivate);
-                    }
-                    catch
-                    {
-                        // they input invalid input
-                        Console.WriteLine("Invalid private selection. Try again");
-                    }
+                Privates selectedPrivate = 0;
+                while (!Enum.TryParse(Console.ReadLine().Replace(' ', '_'), out selectedPrivate))
+                    // they input invalid input
+                    Console.WriteLine("Invalid private selection. Try again");
 
                 // remove the selected private from list
-                privatesSelection.Remove(selectPrivate);
+                privatesSelection.Remove(selectedPrivate);
 
                 // shuffle
                 PrivateDraftServices.Shuffle(privatesSelection, new Random());
