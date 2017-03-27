@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1846_Draft_Host.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -8,9 +9,35 @@ using System.Text;
 
 namespace _1846_Draft_Host
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+
+    /// <summary>
+    /// Registers a new player with the client
+    /// </summary>
+    [ServiceContract(CallbackContract = typeof(IRegistrationResponse))]
+    public interface IRegistration
+    {
+        /// <summary>
+        /// Registers a player to the game
+        /// </summary>
+        /// <param name="newPlayer"></param>
+        [OperationContract]
+        void RegisterPlayer(Player newPlayer);
+
+        [OperationContract]
+        void StartGame();
+    }
+
+    /// <summary>
+    /// Displays the message to the console
+    /// </summary>
+    public interface IRegistrationResponse
+    {
+        [OperationContract(IsOneWay = true)]
+        void DisplayServerMessage(string message);
+    }
+    /*
     [ServiceContract]
-    public interface IService1
+    public interface IServices
     {
 
         [OperationContract]
@@ -44,4 +71,5 @@ namespace _1846_Draft_Host
             set { stringValue = value; }
         }
     }
+    */
 }
